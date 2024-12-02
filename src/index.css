@@ -1,13 +1,102 @@
+/* Global Styles */
 body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f9f9; /* Light pastel blue */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  color: #2c3e50; /* Deep gray-blue */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff; /* White for contrast */
+  border: 1px solid #b8dfd8; /* Pastel green */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h3 {
+  color: #34495e; /* Slightly darker gray-blue */
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #dfe6e9; /* Light gray for a subtle divider */
+  padding-bottom: 5px;
+}
+
+/* Input and Label Styles */
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  accent-color: #ff6b6b; /* Pastel red for checkboxes and radios */
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #cce7e8; /* Pastel cyan */
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #34495e;
+}
+
+/* Button Styles */
+button {
+  background-color: #a29bfe; /* Pastel purple */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #6c5ce7; /* Darker pastel purple */
+}
+
+button[type="submit"] {
+  background-color: #55efc4; /* Pastel green */
+}
+
+button[type="submit"]:hover {
+  background-color: #00cec9; /* Teal green */
+}
+
+/* Displaying Selected Text */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #636e72; /* Neutral gray */
+}
+
+/* Additional Form Elements */
+form {
+  margin-top: 20px;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #ff7675; /* Soft red focus color */
+  box-shadow: 0 0 4px rgba(255, 118, 117, 0.3);
 }

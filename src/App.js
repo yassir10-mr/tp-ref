@@ -15,10 +15,6 @@ export default function App() {
 function NotificationPreferences() {
   const [notificationMethod, setNotificationMethod] = useState("");
 
-  const handleChange = (e) => {
-    setNotificationMethod(e.target.value);
-  };
-
   return (
     <div>
       <h3>Choose your preferred notification method:</h3>
@@ -27,7 +23,7 @@ function NotificationPreferences() {
           type="radio"
           value="Email"
           checked={notificationMethod === "Email"}
-          onChange={handleChange}
+          onChange={(e) => setNotificationMethod(e.target.value)}
         />
         Email
       </label>
@@ -36,7 +32,7 @@ function NotificationPreferences() {
           type="radio"
           value="SMS"
           checked={notificationMethod === "SMS"}
-          onChange={handleChange}
+          onChange={(e) => setNotificationMethod(e.target.value)}
         />
         SMS
       </label>
@@ -56,11 +52,8 @@ function NotificationPreferences() {
 
 function CitySelect() {
   const [selectedCity, setSelectedCity] = useState("");
-  const [cities, setCities] = useState(["Paris", "London", "New York"]);
 
-  const handleCityChange = (e) => {
-    setSelectedCity(e.target.value);
-  };
+  const [cities, setCities] = useState(["Paris", "London", "New York"]);
 
   const addCity = () => {
     setCities([...cities, "Tokyo"]); // Ajout de la ville "Tokyo"
@@ -69,14 +62,20 @@ function CitySelect() {
   return (
     <div>
       <h3>Select your city:</h3>
+
       <button onClick={addCity}>Add Tokyo</button>
-      <select value={selectedCity} onChange={handleCityChange}>
+
+      <select
+        value={selectedCity}
+        onChange={(e) => setSelectedCity(e.target.value)}
+      >
         {cities.map((city, index) => (
           <option key={index} value={city}>
             {city}
           </option>
         ))}
       </select>
+
       <p>Selected City: {selectedCity}</p>
     </div>
   );
